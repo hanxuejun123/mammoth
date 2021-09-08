@@ -6,6 +6,7 @@
 from datasets.perm_mnist import PermutedMNIST
 from datasets.seq_mnist import SequentialMNIST
 from datasets.seq_cifar10 import SequentialCIFAR10
+from datasets.seq_cifar100 import SequentialCIFAR100
 from datasets.rot_mnist import RotatedMNIST
 from datasets.seq_tinyimagenet import SequentialTinyImagenet
 from datasets.mnist_360 import MNIST360
@@ -16,6 +17,7 @@ NAMES = {
     PermutedMNIST.NAME: PermutedMNIST,
     SequentialMNIST.NAME: SequentialMNIST,
     SequentialCIFAR10.NAME: SequentialCIFAR10,
+    SequentialCIFAR100.NAME: SequentialCIFAR100,
     RotatedMNIST.NAME: RotatedMNIST,
     SequentialTinyImagenet.NAME: SequentialTinyImagenet,
     MNIST360.NAME: MNIST360
