@@ -11,6 +11,7 @@ from backbone.MNISTMLP import MNISTMLP
 import torch.nn.functional as F
 from utils.conf import base_path
 from PIL import Image
+import numpy as np
 from datasets.utils.validation import get_train_val
 from typing import Tuple
 from datasets.utils.continual_dataset import ContinualDataset
@@ -25,6 +26,10 @@ def store_mnist_loaders(transform, setting):
     else:
         test_dataset = MNIST(base_path() + 'MNIST',
                              train=False, download=True, transform=transform)
+
+    p = np.random.permutation(len(train_dataset.data))[:1000]    #sample 1000 examples per task
+    train_dataset.data = train_dataset.data[p]
+    train_dataset.targets = np.array(train_dataset.targets[p])
 
     train_loader = DataLoader(train_dataset,
                               batch_size=setting.args.batch_size, shuffle=True)
