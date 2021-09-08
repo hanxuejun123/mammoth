@@ -67,11 +67,3 @@ Official repository of [Dark Experience for General Continual Learning: a Strong
  year = {2020}
 }
 ```
-## Modification:
-Add two new models ccl.py and ccl.py, and a new dataset S-CIFAR-100. Modify the size of perm-MNIST and rot-MNIST to 1000.
-
-Run experiments e.g.:
-+ `python ./utils/main.py  --model ccl --dataset seq-mnist --buffer_size 200 --csv_log --seed 0 --lr 0.1 --minibatch_size 10 --batch_size 10 --n_epochs 1 --w 0.5 --eta 0.1 --tau 0.1 --alpha 0.5`
-+ `python ./utils/main.py  --model cclp --dataset seq-mnist --buffer_size 200 --csv_log --seed 0 --lr 0.1 --minibatch_size 10 --batch_size 10 --n_epochs 1 --w 0.5 --eta 0.1 --tau 0.1 --alpha 0.5 --beta 0.01`
-+ `python ./utils/main.py  --model ccl --dataset seq-cifar100 --buffer_size 200 --csv_log --seed 0 --lr 0.03 --minibatch_size 10 --batch_size 10 --n_epochs 1 --w 0.5 --eta 0.1 --tau 0.1 --alpha 0.1 --beta 0.1`
-+ `python ./utils/main.py  --model cclp --dataset seq-cifar100 --buffer_size 200 --csv_log --seed 0 --lr 0.03 --minibatch_size 10 --batch_size 10 --n_epochs 1 --w 0.5 --eta 0.1 --tau 0.1 --alpha 0.1 `
